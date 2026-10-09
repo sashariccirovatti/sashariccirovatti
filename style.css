@@ -30,9 +30,9 @@ body {
 }
 
 :root {
-  --header: 20vw;
+  --header: 22vw;
   --headerPadding: 0vw;
-  --gradientHeight: 4vw;
+  --gradientHeight: 5vw;
 }
 
 body {
@@ -233,20 +233,69 @@ body::before {
 .footer {
   position: fixed;
   z-index: 2;
-  width: 50vw;
-  height: 2vw;
-  left: 2vw;
-  bottom: 0vw;
+  left: 5vw;
+  bottom: 2vw;
 
   font-family: 'serifItalic';
-  color: #353738;
+
+  color: white;
+  mix-blend-mode: difference;
+}
+
+.footer2 {
+  position: fixed;
+  z-index: 2;
+  right: 5vw;
+  bottom: 2vw;
+
+  font-family: 'serifItalic';
+  text-align: right;
+
+  color: white;
+  mix-blend-mode: difference;
 }
 
 
 
 
 
-/*Project page template*/
+/*Project page*/
+.landingProject {
+  padding: 0;
+  margin-top: calc(-1 * var(--gradientHeight)); /* slide up under the gradient */
+  height: calc(100vh - var(--header) + var(--gradientHeight));
+  height: calc(100dvh - var(--header) + var(--gradientHeight));
+  z-index: -1; /* behind the header so the gradient sits on top */
+  overflow: hidden;
+  cursor: crosshair;
+  touch-action: none;
+}
+
+.landingProject::before,
+.landingProject::after {
+  display: none;
+}
+
+.landingProject img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+body:has(.landingProject.active) .header {
+  background: linear-gradient(
+    rgba(230, 230, 230, 1) calc(100% - var(--gradientHeight)),
+    rgba(230, 230, 230, 0) 100%
+  );
+}
+
+body:has(.landingProject.active) .header::after {
+  display: none;
+}
+
 .projectPage {
   display: grid;
   grid-template-columns: 30vw 1fr;
@@ -281,15 +330,14 @@ body::before {
   width: 5vw;
   font-family: 'serifItalic';
   color: #353738;
-  text-align: right;
 }
 
 .metaRow dd {
-  margin-right: 1vw;
+  margin-left: 0;
 }
 
 .projectAbstract {
-    text-indent: 7.5vw;
+    text-indent: 5vw;
 }
 
 
@@ -297,12 +345,10 @@ body::before {
 .projectMedia {
   display: flex;
   flex-direction: column;
-  gap: 0.5vw;
 }
 
 .mediaRow {
   display: flex;
-  gap: 0.5vw;
 }
 
 .mediaRow .mediaItem {
@@ -325,4 +371,124 @@ body::before {
   font-family: 'sansSerifItalic';
   font-size: 0.8em;
   color: #353738;
+}
+
+
+
+
+
+
+
+
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  html,
+  body {
+    font-size: 2vw;
+  }
+
+  :root {
+    --header: 90vw;          /* total header height: tweak to taste */
+    --gradientHeight: 10vw;
+  }
+
+  /* Header: bio / contacts / work */
+  .header {
+    display: grid;
+    grid-template-columns: 10vw 1fr;
+    grid-template-rows: auto auto 1fr;
+    column-gap: 2vw;
+    row-gap: 4vw;
+    padding-top: 12vw;
+  }
+
+  .headerSection {
+    width: auto;
+    height: auto;
+  }
+
+  .header > :nth-child(3) { grid-row: 1; grid-column: 1; }  /* "bio" label */
+  .header > :nth-child(4) { grid-row: 1; grid-column: 2; }  /* bio text */
+
+  .header > :nth-child(5) { grid-row: 2; grid-column: 1; }  /* "contacts" label */
+  .header > :nth-child(6) { grid-row: 2; grid-column: 2; }  /* contacts */
+
+  .header > :nth-child(1) { grid-row: 3; grid-column: 1; }  /* "work" label */
+  .header > :nth-child(2) { grid-row: 3; grid-column: 2; }  /* projects */
+
+  .bio {
+    width: auto;
+    height: 100%;
+    margin-right: 0;
+  }
+
+  .contacts {
+    width: auto;
+    height: auto;
+    overflow-wrap: anywhere;
+  }
+
+  .projects {
+    width: auto;
+    height: 100%;
+    min-height: 0;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+
+  .projectSelector {
+    margin-bottom: 2vw;
+  }
+
+  .bio {
+    width: auto;
+    height: 100%;
+    margin-right: 0;
+    text-indent: 0;
+  }
+
+  .contacts {
+    width: auto;
+    height: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  /* Project page */
+  .projectPage {
+    grid-template-columns: 1fr;
+    row-gap: 8vw;
+    column-gap: 2vw;
+  }
+
+  .projectInfo {
+    position: static;
+  }
+
+  .projectTitle {
+    font-size: 6vw;
+  }
+
+  .metaRow dd {
+    margin-left: 2vw;
+  }
+
+  .metaRow dt {
+    width: 12vw;
+    flex-shrink: 0;
+  }
+
+  .projectAbstract {
+    text-indent: 14vw;
+  }
+
+  .projectMedia {
+    gap: 1vw;
+  }
+
+  .mediaRow {
+    gap: 1vw;
+  }
 }
