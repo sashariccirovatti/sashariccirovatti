@@ -62,21 +62,6 @@ body {
   --gradientHeight: 5vw;
 }
 
-.intro{
-  position: absolute;
-  width: 60vw;
-  height: 100vh;
-  left: 20vw;
-  top: 0vh;
-
-  font-size: 2vw;
-  text-indent: 15vw;
-  color: white;
-  mix-blend-mode: difference;
-
-  align-content: center;
-}
-
 .landingPage {
   padding-top: calc(var(--header) - var(--headerPadding));
 }

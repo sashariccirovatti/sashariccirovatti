@@ -1,0 +1,119 @@
+/*
+           ▒▒▓▓▓▓▓▓▓▒▒▒         
+       ▒▓▓███▓▓▓▓▓▓▒▒▒▒▒▒▒      
+    ▒▓████▓▒                    
+   ▓████▓▒                      
+  ▓████▓     ▒▓▓████████▓▓▒     
+ ▓████▓    ▓███████████████▓▒   
+▒▓████▒   ▓███▓░       ▒▓████▓░ 
+▒████▓   ░▓██▓           ▓████▓░
+▒████▓    ▓█▓             ▓████▒
+▒████▓    ▓██▒            ▓████▒
+▒████▓    ▒▓██▓▓▒▒▒▒░    ▒█████▒
+▒█████▓    ░▒▓▓█▓▓▒░    ▒█████▓░
+ ▓█████▓               ▓██████▒ 
+ ▒▓█████▓▒           ▓▓█████▓▒  
+  ▒▓█████████▓▓▓▓▓█████████▓    
+    ▒▓██████████████████▓▒      
+        ▒▒▓▓▓▓▓▓▓▓▓▓▒▒          
+
+©2026 Andrea Martinelli
+a website by Andrea Martinelli (@carol__jpg)
+https://caroljpeg.github.io/Andrea_Martinelli/index.html
+*/
+
+
+
+
+
+/*Fonts*/
+@font-face {
+  font-family: 'sansSerif';
+  src: url('media/typefaces/ABCDiatype-Regular-Trial.otf') format('opentype');
+}
+@font-face {
+  font-family: 'sansSerifItalic';
+  src: url('media/typefaces/ABCDiatype-RegularItalic-Trial.otf') format('opentype');
+}
+@font-face {
+  font-family: 'serif';
+  src: url('media/typefaces/BradfordLL-Book.otf') format('opentype');
+}
+@font-face {
+  font-family: 'serifItalic';
+  src: url('media/typefaces/BradfordLL-BookItalic.otf') format('opentype');
+}
+
+
+
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 0.8vw;
+  overscroll-behavior-y: none;
+}
+
+a {
+  font-family: 'serifItalic';
+  color: #353738;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: white;
+  background-color: #353738;
+}
+
+.intro{
+  position: absolute;
+  width: 60vw;
+  height: 100vh;
+  left: 20vw;
+  top: 0vh;
+
+  font-size: 2vw;
+  text-indent: 15vw;
+  color: white;
+  mix-blend-mode: difference;
+
+  align-content: center;
+}
+
+.view img {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+
+
+
+
+.footer {
+  position: fixed;
+  z-index: 2;
+  left: 5vw;
+  bottom: 2vw;
+
+  font-family: 'serifItalic';
+
+  color: white;
+  mix-blend-mode: difference;
+}
+
+.footer2 {
+  position: fixed;
+  z-index: 2;
+  right: 5vw;
+  bottom: 2vw;
+
+  font-family: 'serifItalic';
+  text-align: right;
+
+  color: white;
+  mix-blend-mode: difference;
+}
