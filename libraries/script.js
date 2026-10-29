@@ -1,3 +1,29 @@
+//            ▒▒▓▓▓▓▓▓▓▒▒▒         
+//        ▒▓▓███▓▓▓▓▓▓▒▒▒▒▒▒▒      
+//     ▒▓████▓▒                    
+//    ▓████▓▒                      
+//   ▓████▓     ▒▓▓████████▓▓▒     
+//  ▓████▓    ▓███████████████▓▒   
+// ▒▓████▒   ▓███▓░       ▒▓████▓░ 
+// ▒████▓   ░▓██▓           ▓████▓░
+// ▒████▓    ▓█▓             ▓████▒
+// ▒████▓    ▓██▒            ▓████▒
+// ▒████▓    ▒▓██▓▓▒▒▒▒░    ▒█████▒
+// ▒█████▓    ░▒▓▓█▓▓▒░    ▒█████▓░
+//  ▓█████▓               ▓██████▒ 
+//  ▒▓█████▓▒           ▓▓█████▓▒  
+//   ▒▓█████████▓▓▓▓▓█████████▓    
+//     ▒▓██████████████████▓▒      
+//         ▒▒▓▓▓▓▓▓▓▓▓▓▒▒          
+
+// ©2026 Andrea Martinelli
+// a website by Andrea Martinelli (@carol__jpg)
+// https://caroljpeg.github.io/Andrea_Martinelli/index.html
+
+
+
+
+
 const selectors = document.querySelectorAll('.projectSelector');
 const views = document.querySelectorAll('.view');
 

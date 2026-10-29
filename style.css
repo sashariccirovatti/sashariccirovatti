@@ -1,3 +1,31 @@
+/*
+           ▒▒▓▓▓▓▓▓▓▒▒▒         
+       ▒▓▓███▓▓▓▓▓▓▒▒▒▒▒▒▒      
+    ▒▓████▓▒                    
+   ▓████▓▒                      
+  ▓████▓     ▒▓▓████████▓▓▒     
+ ▓████▓    ▓███████████████▓▒   
+▒▓████▒   ▓███▓░       ▒▓████▓░ 
+▒████▓   ░▓██▓           ▓████▓░
+▒████▓    ▓█▓             ▓████▒
+▒████▓    ▓██▒            ▓████▒
+▒████▓    ▒▓██▓▓▒▒▒▒░    ▒█████▒
+▒█████▓    ░▒▓▓█▓▓▒░    ▒█████▓░
+ ▓█████▓               ▓██████▒ 
+ ▒▓█████▓▒           ▓▓█████▓▒  
+  ▒▓█████████▓▓▓▓▓█████████▓    
+    ▒▓██████████████████▓▒      
+        ▒▒▓▓▓▓▓▓▓▓▓▓▒▒          
+
+©2026 Andrea Martinelli
+a website by Andrea Martinelli (@carol__jpg)
+https://caroljpeg.github.io/Andrea_Martinelli/index.html
+*/
+
+
+
+
+
 /*Fonts*/
 @font-face {
   font-family: 'sansSerif';
@@ -20,7 +48,6 @@
 
 
 
-/*Base*/
 html,
 body {
   margin: 0;
@@ -35,7 +62,7 @@ body {
   --gradientHeight: 5vw;
 }
 
-body {
+.landingPage {
   padding-top: calc(var(--header) - var(--headerPadding));
 }
 
@@ -58,8 +85,7 @@ p {
 
 
 
-/*Header*/
-body::before {
+.landingPage::before {
   content: '';
   position: fixed;
   top: 0;
@@ -82,7 +108,7 @@ body::before {
   display: flex;
   width: 100%;
   height: var(--header);
-  padding-top: 5vw;
+  padding-top: 4vw;
   padding-bottom: var(--headerPadding);
   padding-left: 2vw;
   padding-right: 2vw;
@@ -176,11 +202,30 @@ body::before {
 
 
 
-/*Views (scroll over the header)*/
+.about {
+  position: absolute;
+  width: 35vw;
+  height: 100vh;
+  padding-left: 32.5vw;
+  padding-right: 32.5vw;
+
+  font-family: 'sansSerif';
+  text-indent: 5vw;
+  color: #353738;
+  background-color: rgba(230, 230, 230, 1);
+
+  align-content: center;
+}
+
+
+
+
+
+/*view (scroll over the header)*/
 .view::before {
   content: '';
   position: absolute;
-  top: calc(-1 * var(--gradientHeight));   /* sits above the view's edge */
+  top: calc(-1 * var(--gradientHeight));
   left: 0;
   width: 100%;
   height: var(--gradientHeight);
@@ -229,7 +274,6 @@ body::before {
 
 
 
-/*Fixed bottom elements*/
 .footer {
   position: fixed;
   z-index: 2;
@@ -259,13 +303,12 @@ body::before {
 
 
 
-/*Project page*/
 .landingProject {
   padding: 0;
-  margin-top: calc(-1 * var(--gradientHeight)); /* slide up under the gradient */
+  margin-top: calc(-1 * var(--gradientHeight));
   height: calc(100vh - var(--header) + var(--gradientHeight));
   height: calc(100dvh - var(--header) + var(--gradientHeight));
-  z-index: -1; /* behind the header so the gradient sits on top */
+  z-index: -1;
   overflow: hidden;
   cursor: crosshair;
   touch-action: none;
@@ -304,7 +347,7 @@ body:has(.landingProject.active) .header::after {
 }
 
 
-/* Left column */
+/* left column */
 .projectInfo {
   align-self: start;
   position: sticky;
@@ -341,7 +384,7 @@ body:has(.landingProject.active) .header::after {
 }
 
 
-/* Right column */
+/* right column */
 .projectMedia {
   display: flex;
   flex-direction: column;
@@ -382,7 +425,6 @@ body:has(.landingProject.active) .header::after {
 
 
 
-/* Mobile */
 @media (max-width: 768px) {
 
   html,
@@ -391,18 +433,19 @@ body:has(.landingProject.active) .header::after {
   }
 
   :root {
-    --header: 90vw;          /* total header height: tweak to taste */
+    --header: 90vw;
     --gradientHeight: 10vw;
   }
 
-  /* Header: bio / contacts / work */
   .header {
     display: grid;
     grid-template-columns: 10vw 1fr;
     grid-template-rows: auto auto 1fr;
     column-gap: 2vw;
     row-gap: 4vw;
-    padding-top: 12vw;
+    padding-top: 9vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
   }
 
   .headerSection {
@@ -410,25 +453,25 @@ body:has(.landingProject.active) .header::after {
     height: auto;
   }
 
-  .header > :nth-child(3) { grid-row: 1; grid-column: 1; }  /* "bio" label */
-  .header > :nth-child(4) { grid-row: 1; grid-column: 2; }  /* bio text */
+  .header > :nth-child(3) { grid-row: 1; grid-column: 1; }
+  .header > :nth-child(4) { grid-row: 1; grid-column: 2; }
 
-  .header > :nth-child(5) { grid-row: 2; grid-column: 1; }  /* "contacts" label */
-  .header > :nth-child(6) { grid-row: 2; grid-column: 2; }  /* contacts */
+  .header > :nth-child(5) { grid-row: 2; grid-column: 1; }
+  .header > :nth-child(6) { grid-row: 2; grid-column: 2; }
 
-  .header > :nth-child(1) { grid-row: 3; grid-column: 1; }  /* "work" label */
-  .header > :nth-child(2) { grid-row: 3; grid-column: 2; }  /* projects */
+  .header > :nth-child(1) { grid-row: 3; grid-column: 1; }
+  .header > :nth-child(2) { grid-row: 3; grid-column: 2; }
 
   .bio {
     width: auto;
     height: 100%;
     margin-right: 0;
+    text-indent: 0;
   }
 
   .contacts {
     width: auto;
     height: auto;
-    overflow-wrap: anywhere;
   }
 
   .projects {
@@ -443,20 +486,11 @@ body:has(.landingProject.active) .header::after {
     margin-bottom: 2vw;
   }
 
-  .bio {
-    width: auto;
-    height: 100%;
-    margin-right: 0;
-    text-indent: 0;
-  }
-
   .contacts {
     width: auto;
     height: 100%;
-    overflow-wrap: anywhere;
   }
 
-  /* Project page */
   .projectPage {
     grid-template-columns: 1fr;
     row-gap: 8vw;
