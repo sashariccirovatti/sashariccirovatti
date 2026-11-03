@@ -97,22 +97,6 @@ const landingImages = [
   'media/landing-page/51.jpg',
   'media/landing-page/52.jpg',
   'media/landing-page/53.jpg',
-  'media/landing-page/54.jpg',
-  'media/landing-page/55.jpg',
-  'media/landing-page/56.jpg',
-  'media/landing-page/57.jpg',
-  'media/landing-page/58.jpg',
-  'media/landing-page/59.jpg',
-  'media/landing-page/60.jpg',
-  'media/landing-page/61.jpg',
-  'media/landing-page/62.jpg',
-  'media/landing-page/63.jpg',
-  'media/landing-page/64.jpg',
-  'media/landing-page/65.jpg',
-  'media/landing-page/66.jpg',
-  'media/landing-page/67.jpg',
-  'media/landing-page/68.jpg',
-  'media/landing-page/69.jpg',
 ];
 
 const landing = document.getElementById('landingProject');

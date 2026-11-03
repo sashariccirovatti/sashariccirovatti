@@ -43,6 +43,10 @@ https://caroljpeg.github.io/Andrea_Martinelli/index.html
   font-family: 'serifItalic';
   src: url('media/typefaces/BradfordLL-BookItalic.otf') format('opentype');
 }
+@font-face {
+  font-family: 'trattarello';
+  src: url('media/typefaces/Trattatello.ttf') format('truetype');
+}
 
 
 
@@ -54,30 +58,24 @@ body {
   padding: 0;
   font-size: 0.8vw;
   overscroll-behavior-y: none;
+
+  cursor: crosshair;
 }
 
 a {
-  font-family: 'serifItalic';
-  color: #353738;
-  text-decoration: underline;
-}
-
-a:hover {
-  color: white;
-  background-color: #353738;
+  color: black;
+  text-decoration: none;
 }
 
 .intro{
   position: absolute;
-  width: 60vw;
-  height: 100vh;
-  left: 20vw;
-  top: 0vh;
+  width: 80vw;
+  left: 10vw;
+  top: 15vh;
 
-  font-size: 2vw;
-  text-indent: 15vw;
-  color: white;
-  mix-blend-mode: difference;
+  text-align: center;
+  color: black;
+
 
   align-content: center;
 }
@@ -89,6 +87,21 @@ a:hover {
   object-fit: cover;
 }
 
+#landingLine1 {
+  font-family: 'serif';
+  font-size: 1.5vw;
+}
+
+#landingLine2 {
+  font-family: 'trattarello';
+  font-size: 2.5vw;
+}
+
+#landingLine2:hover{
+  text-transform:capitalize;
+  cursor: pointer;
+}
+
 
 
 
@@ -97,7 +110,7 @@ a:hover {
   position: fixed;
   z-index: 2;
   left: 5vw;
-  bottom: 2vw;
+  bottom: 2vh;
 
   font-family: 'serifItalic';
 
@@ -109,11 +122,44 @@ a:hover {
   position: fixed;
   z-index: 2;
   right: 5vw;
-  bottom: 2vw;
+  bottom: 2vh;
 
   font-family: 'serifItalic';
   text-align: right;
 
   color: white;
   mix-blend-mode: difference;
+}
+
+@media (max-width: 768px) {
+html,
+body {
+  font-size: 2vw;
+}
+  
+#landingLine1 {
+  font-size: 3.5vw;
+}
+
+#landingLine2 {
+  font-size: 7vw;
+}
+
+.footer{
+  width: 100vw;
+  height: 1vh;
+  left: 0vw;
+  bottom: 10vh;
+
+  text-align: center;
+}
+
+.footer2{
+  width: 100vw;
+  height: 1vh;
+  left: 0vw;
+  bottom: 12vh;
+
+  text-align: center;
+}
 }
