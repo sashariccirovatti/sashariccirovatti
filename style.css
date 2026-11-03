@@ -437,9 +437,10 @@ body:has(.landingProject.active) .header::after {
 }
 
 .projectTitle {
-  font-family: 'serifItalic';
+  font-family: 'sansSerif';
   font-weight: normal;
-  font-size: 2vw;
+  font-size: 1.5vw;
+  text-transform: uppercase;
 
   color: #353738;
 }
@@ -581,7 +582,7 @@ body {
 }
 
 .projectTitle {
-  font-size: 6vw;
+  font-size: 3vw;
 }
 
 .metaRow dd {
