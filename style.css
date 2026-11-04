@@ -43,6 +43,10 @@ https://caroljpeg.github.io/Andrea_Martinelli/index.html
   font-family: 'serifItalic';
   src: url('media/typefaces/BradfordLL-BookItalic.otf') format('opentype');
 }
+@font-face {
+  font-family: 'trattarello';
+  src: url('media/typefaces/Trattatello.ttf') format('truetype');
+}
 
 
 
@@ -142,8 +146,9 @@ p {
 }
 
 #sectionTitle {
-  font-family: 'serifItalic';
+  font-family: 'SerifItalic';
   color: #353738;
+  text-transform: lowercase;
 }
 
 .projects {
@@ -263,18 +268,18 @@ p {
 }
 
 .title {
-  font-family: 'serifItalic';
+  font-family: 'trattarello';
   font-size: 1.3rem;
   color: #353738;
 }
 
 .title .sans {
-  font-family: 'sansSerif';
+  font-family: 'serifItalic';
 }
 
 .where {
   padding-left: 5vw;
-  font-family: 'sansSerif';
+  font-family: 'serifItalic';
   font-size: 1rem;
   color: #353738;
 }
@@ -286,13 +291,13 @@ p {
 
 .tag {
   padding-left: 5vw;
-  font-family: 'sansSerif';
+  font-family: 'serifItalic';
   font-size: 0.8em;
   color: #353738;
 }
 
 .note {
-  font-family: 'sansSerif';
+  font-family: 'serifItalic';
   font-size: 1rem;
 }
 
@@ -437,10 +442,10 @@ body:has(.landingProject.active) .header::after {
 }
 
 .projectTitle {
-  font-family: 'sansSerif';
+  font-family: 'trattarello';
   font-weight: normal;
   font-size: 1.5vw;
-  text-transform: uppercase;
+  text-transform: capitalize;
 
   color: #353738;
 }
